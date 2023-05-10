@@ -12,5 +12,6 @@ catkin_install_python(PROGRAMS
   scripts/go_home.py
   scripts/read_angs.py
   scripts/move_all.py
+  scripts/gui/gui.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
