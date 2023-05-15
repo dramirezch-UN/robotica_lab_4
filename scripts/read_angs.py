@@ -5,7 +5,7 @@ from sensor_msgs.msg import JointState
 import math
 import time
 
-def callback(data):
+def callback_listen(data):
     print("Angulos")
     angs = data.position
     i = 1
@@ -16,7 +16,7 @@ def callback(data):
     
 def listener():
     rospy.init_node('joint_listener', anonymous=True)
-    rospy.Subscriber("/dynamixel_workbench/joint_states", JointState, callback)
+    rospy.Subscriber("/dynamixel_workbench/joint_states", JointState, callback_listen)
     rospy.spin()
 
 if __name__ == '__main__':
